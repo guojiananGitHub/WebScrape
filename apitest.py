@@ -1,5 +1,13 @@
-from twitter import Twitter, OAuth
+from twitter import *
+import urllib.request
 
-t = Twitter(auth=OAuth("769167810152890368-G9cEqx12feezEO75ehDt6uCNk51qqTf", "S3kDSDrJn3qGCuuB2PN16WRuJlmtq9mSrvNxJnt5gE6xO", "B3rNMcICBig8FjCNtOwY0dw4I", "ZDFmdAmzWIe12kQ7wvwCPWZFLEdKNd22rslhKl1oPfgjhChhvH"))
+# 代理地址和端口
+proxy_info = {'host':'localhostXXX','port':xxx}
+# 為代理創建一個處理程序
+proxy_support = urllib.ProxyHandler({"http": "http://%(host)s:%(port)d" % proxy_info})
+#
+opener =
+
+t = Twitter(auth=OAuth("", "", "", ""))
 pythonTweets = t.search.tweets(q = "#python")
 print(pythonTweets)
